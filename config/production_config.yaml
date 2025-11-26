@@ -1,0 +1,86 @@
+# Production Configuration for ML-IDS-IPS
+
+dashboard:
+  host: 0.0.0.0
+  port: 5050
+  debug: false
+  ssl_enabled: true
+  ssl_cert: certs/cert.pem
+  ssl_key: certs/key.pem
+
+kafka:
+  bootstrap_servers:
+    - localhost:9092
+  topic_packets: network_packets
+  topic_predictions: ml_predictions
+  topic_alerts: security_alerts
+
+redis:
+  host: localhost
+  port: 6379
+  db: 0
+
+network:
+  interface: en0
+  packet_count: 10000
+  timeout: 0.1
+
+ml:
+  model_path: models
+  prediction_threshold: 0.95
+  batch_size: 1000
+  parallel_predictions: true
+  model_thresholds:
+    gradient_boosting_comprehensive: 0.95
+    bagging_comprehensive: 0.90
+    random_forest_comprehensive: 0.85
+    svm_rbf_comprehensive: 0.80
+
+monitoring:
+  update_interval: 1.0
+  alert_cooldown: 30.0
+  health_check_interval: 60.0
+
+security:
+  authentication_required: true
+  session_timeout_minutes: 30
+  max_login_attempts: 5
+  lockout_duration_minutes: 30
+  
+auto_block:
+  enabled: true
+  block_duration_minutes: 60
+  auto_block_on_high_severity: true
+  auto_block_threshold: 3
+
+email:
+  enabled: true
+  smtp_server: smtp.gmail.com
+  smtp_port: 587
+  from_email: ids@company.com
+  from_password: CHANGE_THIS
+  recipients:
+    - security@company.com
+    - admin@company.com
+
+logging:
+  level: INFO
+  file: logs/production.log
+  max_size_mb: 100
+  backup_count: 10
+  
+audit:
+  enabled: true
+  file: logs/audit.log
+  log_retention_days: 90
+
+performance:
+  workers: 4
+  threads_per_worker: 2
+  max_connections: 100
+
+backup:
+  enabled: true
+  backup_dir: backups
+  backup_interval_hours: 24
+  retention_days: 30

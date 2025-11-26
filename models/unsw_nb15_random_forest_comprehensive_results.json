@@ -1,0 +1,23 @@
+{
+  "model_name": "random_forest",
+  "dataset_name": "unsw_nb15",
+  "best_params": {
+    "n_estimators": 100,
+    "max_depth": 10,
+    "random_state": 42
+  },
+  "metrics": {
+    "accuracy": 0.68,
+    "precision_macro": 0.068,
+    "recall_macro": 0.1,
+    "f1_macro": 0.08095238095238096,
+    "precision_weighted": 0.46240000000000003,
+    "recall_weighted": 0.68,
+    "f1_weighted": 0.5504761904761906,
+    "roc_auc_ovr": 0.5655884863033955,
+    "roc_auc_ovo": 0.5622398326614597
+  },
+  "cv_mean": 0.67875,
+  "cv_std": 0.003061862178478962,
+  "training_time": 0.24515581130981445
+}

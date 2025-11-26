@@ -1,0 +1,42 @@
+# Core ML Libraries
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
+
+# Data Processing
+scipy>=1.11.0
+
+# Configuration
+pyyaml>=6.0.0
+python-dotenv>=1.0.0
+
+# Utilities
+requests>=2.31.0
+joblib>=1.3.0
+tqdm>=4.65.0
+
+# Web Framework and Real-time Communication
+flask>=2.3.0
+flask-socketio>=5.3.0
+bcrypt>=4.0.0
+
+# Real-time Streaming (Kafka, Redis)
+redis>=4.5.0
+kafka-python>=2.0.2
+
+# Network Monitoring
+psutil>=5.9.0
+scapy>=2.5.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Code Quality
+flake8>=6.0.0
+black>=23.7.0

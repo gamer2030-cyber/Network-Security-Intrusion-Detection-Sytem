@@ -1,0 +1,21 @@
+{
+  "model_name": "svm_rbf",
+  "dataset_name": "nsl_kdd",
+  "best_params": {
+    "C": 1.0,
+    "kernel": "rbf",
+    "random_state": 42
+  },
+  "metrics": {
+    "accuracy": 0.585,
+    "precision_macro": 0.11699999999999999,
+    "recall_macro": 0.2,
+    "f1_macro": 0.1476340694006309,
+    "precision_weighted": 0.34222499999999995,
+    "recall_weighted": 0.585,
+    "f1_weighted": 0.4318296529968454
+  },
+  "cv_mean": 0.5825000000000001,
+  "cv_std": 0.002499999999999991,
+  "training_time": 0.028449058532714844
+}

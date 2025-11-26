@@ -1,0 +1,22 @@
+email:
+  enabled: true
+  smtp_server: smtp.gmail.com
+  smtp_port: 587
+  from_email: your_email@gmail.com
+  from_password: YOUR_APP_PASSWORD
+  recipients:
+    - security@company.com
+    - admin@company.com
+
+smtp_settings:
+  use_tls: true
+  timeout: 30
+
+alerts:
+  immediate_for:
+    - severity: HIGH
+      auto_block: true
+    - severity: MEDIUM
+      auto_block: false
+  daily_summary: true
+  summary_time: "18:00"

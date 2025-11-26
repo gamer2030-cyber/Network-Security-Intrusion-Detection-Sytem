@@ -1,0 +1,93 @@
+{
+  "total_models_trained": 60,
+  "total_datasets": 3,
+  "total_algorithms": 20,
+  "best_overall_accuracy": 1.0,
+  "worst_overall_accuracy": 0.4,
+  "average_accuracy": 0.6706833333333333,
+  "best_model_by_dataset": {
+    "cicids2017": {
+      "model": "gradient_boosting",
+      "accuracy": 1.0,
+      "f1_macro": 1.0
+    },
+    "unsw_nb15": {
+      "model": "random_forest",
+      "accuracy": 0.68,
+      "f1_macro": 0.08095238095238096
+    },
+    "nsl_kdd": {
+      "model": "random_forest",
+      "accuracy": 0.585,
+      "f1_macro": 0.1476340694006309
+    }
+  },
+  "model_rankings": {
+    "accuracy": {
+      "svm_rbf": 0.7496666666666667,
+      "svm_poly": 0.739,
+      "bagging": 0.735,
+      "gradient_boosting": 0.725,
+      "qda": 0.711,
+      "knn": 0.7053333333333334,
+      "random_forest": 0.7000000000000001,
+      "svm_linear": 0.6913333333333332,
+      "extra_trees": 0.6896666666666667,
+      "mlp_classifier": 0.6866666666666666,
+      "ridge_classifier": 0.684,
+      "linear_svc": 0.6833333333333332,
+      "bernoulli_nb": 0.672,
+      "logistic_regression": 0.6713333333333334,
+      "lda": 0.6676666666666667,
+      "decision_tree": 0.6446666666666666,
+      "ada_boost": 0.62,
+      "sgd_classifier": 0.594,
+      "perceptron": 0.5613333333333334,
+      "gaussian_nb": 0.48266666666666663
+    },
+    "f1_macro": {
+      "svm_rbf": 0.3991399278954484,
+      "svm_poly": 0.39535436556666775,
+      "bagging": 0.40836388049681105,
+      "gradient_boosting": 0.4106680843522949,
+      "qda": 0.37618871071838766,
+      "knn": 0.36071819024460977,
+      "random_forest": 0.2021849315262623,
+      "svm_linear": 0.22350789789247896,
+      "extra_trees": 0.1698785121517651,
+      "mlp_classifier": 0.43234678019362205,
+      "ridge_classifier": 0.1350132275132275,
+      "linear_svc": 0.15238489469327646,
+      "bernoulli_nb": 0.18837150768747066,
+      "logistic_regression": 0.21494360184180206,
+      "lda": 0.18254739649203286,
+      "decision_tree": 0.27579761226951355,
+      "ada_boost": 0.1711043992762171,
+      "sgd_classifier": 0.24616473524145807,
+      "perceptron": 0.2021034958977964,
+      "gaussian_nb": 0.23561478381479758
+    },
+    "training_time": {
+      "svm_rbf": 0.12799628575642905,
+      "svm_poly": 0.09094889958699544,
+      "bagging": 0.8443336486816406,
+      "gradient_boosting": 16.098957697550457,
+      "qda": 0.008133570353190104,
+      "knn": 0.0006335576375325521,
+      "random_forest": 0.42208290100097656,
+      "svm_linear": 0.2655080159505208,
+      "extra_trees": 0.07596985499064128,
+      "mlp_classifier": 1.2658430735270183,
+      "ridge_classifier": 0.003392934799194336,
+      "linear_svc": 0.7549995581309,
+      "bernoulli_nb": 0.0029462178548177085,
+      "logistic_regression": 0.02085264523824056,
+      "lda": 0.010282278060913086,
+      "decision_tree": 0.05373716354370117,
+      "ada_boost": 0.29662903149922687,
+      "sgd_classifier": 0.09475175539652507,
+      "perceptron": 0.014510313669840494,
+      "gaussian_nb": 0.0011486212412516277
+    }
+  }
+}

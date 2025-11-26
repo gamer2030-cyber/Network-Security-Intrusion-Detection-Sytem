@@ -1,0 +1,102 @@
+{
+  "datasets": {
+    "cicids2017": {
+      "random_forest": {
+        "accuracy": 0.835,
+        "f1_macro": 0.3779683442257751,
+        "cv_mean": 0.8327500000000001,
+        "cv_std": 0.007348469228349533
+      },
+      "gradient_boosting": {
+        "accuracy": 1.0,
+        "f1_macro": 1.0,
+        "cv_mean": 0.9977499999999999,
+        "cv_std": 0.00229128784747791
+      },
+      "svm": {
+        "accuracy": 0.984,
+        "f1_macro": 0.9688333333333332,
+        "cv_mean": 0.9545,
+        "cv_std": 0.004650268809434582
+      },
+      "neural_network": {
+        "accuracy": 1.0,
+        "f1_macro": 1.0,
+        "cv_mean": 0.998,
+        "cv_std": 0.0018708286933869665
+      }
+    },
+    "unsw_nb15": {
+      "random_forest": {
+        "accuracy": 0.68,
+        "f1_macro": 0.08095238095238096,
+        "cv_mean": 0.67875,
+        "cv_std": 0.003061862178478962
+      },
+      "gradient_boosting": {
+        "accuracy": 0.635,
+        "f1_macro": 0.10277777777777777,
+        "cv_mean": 0.6125,
+        "cv_std": 0.023385358667337132
+      },
+      "svm": {
+        "accuracy": 0.68,
+        "f1_macro": 0.08095238095238096,
+        "cv_mean": 0.67875,
+        "cv_std": 0.003061862178478962
+      },
+      "neural_network": {
+        "accuracy": 0.6,
+        "f1_macro": 0.09495601173020526,
+        "cv_mean": 0.595,
+        "cv_std": 0.0221500564333367
+      }
+    },
+    "nsl_kdd": {
+      "random_forest": {
+        "accuracy": 0.585,
+        "f1_macro": 0.1476340694006309,
+        "cv_mean": 0.58125,
+        "cv_std": 0.003952847075210496
+      },
+      "gradient_boosting": {
+        "accuracy": 0.545,
+        "f1_macro": 0.15422647527910685,
+        "cv_mean": 0.54875,
+        "cv_std": 0.019921721813136516
+      },
+      "svm": {
+        "accuracy": 0.585,
+        "f1_macro": 0.1476340694006309,
+        "cv_mean": 0.5825000000000001,
+        "cv_std": 0.002499999999999991
+      },
+      "neural_network": {
+        "accuracy": 0.46,
+        "f1_macro": 0.202084328850661,
+        "cv_mean": 0.4725,
+        "cv_std": 0.006373774391990973
+      }
+    }
+  },
+  "best_models": {
+    "cicids2017": {
+      "model": "gradient_boosting",
+      "accuracy": 1.0
+    },
+    "unsw_nb15": {
+      "model": "random_forest",
+      "accuracy": 0.68
+    },
+    "nsl_kdd": {
+      "model": "random_forest",
+      "accuracy": 0.585
+    }
+  },
+  "overall_summary": {
+    "total_models_trained": 12,
+    "average_accuracy": 0.71575,
+    "best_accuracy": 1.0,
+    "worst_accuracy": 0.46
+  }
+}

@@ -1,0 +1,60 @@
+ml_models:
+  datasets:
+    nsl_kdd:
+      path: "./datasets/nsl_kdd"
+      features: 41
+      classes: 5
+    unsw_nb15:
+      path: "./datasets/unsw_nb15"
+      features: 49
+      classes: 10
+    cicids2017:
+      path: "./datasets/cicids2017"
+      features: 78
+      classes: 5
+  
+  models:
+    neural_network:
+      architecture: [128, 64, 32]
+      activation: "relu"
+      dropout: 0.3
+      epochs: 100
+      batch_size: 32
+      learning_rate: 0.001
+    
+    random_forest:
+      n_estimators: 100
+      max_depth: 10
+      random_state: 42
+    
+    svm:
+      kernel: "rbf"
+      C: 1.0
+      gamma: "scale"
+    
+    gradient_boosting:
+      n_estimators: 100
+      learning_rate: 0.1
+      max_depth: 6
+  
+  adversarial_testing:
+    attacks:
+      fgsm:
+        epsilon_values: [0.01, 0.05, 0.1, 0.2]
+      pgd:
+        epsilon: 0.1
+        epsilon_step: 0.01
+        max_iter: 10
+      cw:
+        confidence: 0.0
+        learning_rate: 0.01
+        max_iter: 1000
+    
+    defenses:
+      adversarial_training:
+        enabled: true
+        attack_type: "fgsm"
+        epsilon: 0.1
+      feature_squeezing:
+        enabled: true
+        bit_depth: 8

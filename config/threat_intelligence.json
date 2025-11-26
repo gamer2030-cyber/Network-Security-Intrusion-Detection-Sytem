@@ -1,0 +1,53 @@
+{
+  "malicious_domains": [
+    "test-malware-demo.com",
+    "test-phishing-demo.net",
+    "malware.com",
+    "phishing-site.net",
+    "suspicious-domain.org",
+    "malicious-website.info",
+    "trojan-hosting.com",
+    "virus-distribution.net",
+    "malware-test.example",
+    "phishing-test.example"
+  ],
+  "malicious_urls": [
+    "http://malware.com/download",
+    "https://phishing-site.net/login",
+    "http://suspicious-domain.org/exploit"
+  ],
+  "suspicious_keywords": [
+    "malware",
+    "phishing",
+    "trojan",
+    "virus",
+    "exploit",
+    "hack",
+    "crack",
+    "keygen",
+    "warez",
+    "piracy",
+    "botnet",
+    "ransomware",
+    "spyware"
+  ],
+  "suspicious_tlds": [
+    ".tk",
+    ".ml",
+    ".ga",
+    ".cf",
+    ".gq",
+    ".top",
+    ".xyz"
+  ],
+  "notes": [
+    "This is a template file for threat intelligence.",
+    "In production, load from real threat intelligence feeds:",
+    "- Abuse.ch",
+    "- PhishTank",
+    "- Malware Domain List",
+    "- OpenPhish",
+    "- URLhaus"
+  ]
+}
+

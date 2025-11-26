@@ -1,0 +1,79 @@
+dashboard:
+  host: 0.0.0.0
+  port: 5050
+  debug: true
+
+kafka:
+  bootstrap_servers:
+    - localhost:9092
+  topic_packets: network_packets
+  topic_predictions: ml_predictions
+  topic_alerts: security_alerts
+
+redis:
+  host: localhost
+  port: 6379
+  db: 0
+
+network:
+  interface: en0
+  packet_count: 1000
+  timeout: 1.0
+
+ml:
+  model_path: models
+  prediction_threshold: 0.9  # Restored to production threshold
+  batch_size: 100
+  # Model-specific thresholds for optimized best models only
+  model_thresholds:
+    gradient_boosting_comprehensive: 0.95  # 100% accuracy - high threshold
+    bagging_comprehensive: 0.90            # 100% accuracy - high threshold
+    random_forest_comprehensive: 0.85     # 58-68% accuracy - medium threshold
+    svm_rbf_comprehensive: 0.80           # 58.5% accuracy - lower threshold
+
+monitoring:
+  update_interval: 5.0
+  alert_cooldown: 30.0
+
+# Whitelist configuration to reduce false positives
+whitelist:
+  # Common ports that should rarely trigger alerts
+  safe_ports: [80, 443, 993, 995, 22, 21, 25, 53, 110, 143]
+  # Safe protocols
+  safe_protocols: ["TCP", "UDP"]
+  # Known good IP ranges (private networks)
+  safe_ip_ranges:
+    - "192.168.0.0/16"
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+  # Major cloud providers
+  trusted_domains:
+    - "amazonaws.com"
+    - "google.com"
+    - "microsoft.com"
+    - "cloudflare.com"
+
+# Used only by simulator fallbacks
+simulation:
+  packet_rate: 10
+  threat_probability: 0.1
+
+# Honeypot configuration
+honeypot:
+  enabled: true
+  services:
+    SSH:
+      port: 2222
+      enabled: true
+    HTTP:
+      port: 8080
+      enabled: true
+    FTP:
+      port: 2121
+      enabled: true
+    Telnet:
+      port: 2323
+      enabled: true
+    MySQL:
+      port: 3307
+      enabled: true

@@ -1,0 +1,47 @@
+{
+  "datasets": {
+    "cicids2017": {
+      "svm": {
+        "fgsm": {
+          "average_success_rate": 0.014500000000000013,
+          "num_tests": 4
+        },
+        "pgd": {
+          "average_success_rate": 0.016000000000000014,
+          "num_tests": 1
+        },
+        "random_noise": {
+          "average_success_rate": 0.015000000000000013,
+          "num_tests": 3
+        }
+      },
+      "random_forest": {
+        "fgsm": {
+          "average_success_rate": 0.23074999999999998,
+          "num_tests": 4
+        },
+        "pgd": {
+          "average_success_rate": 0.19899999999999995,
+          "num_tests": 1
+        },
+        "random_noise": {
+          "average_success_rate": 0.22366666666666665,
+          "num_tests": 3
+        }
+      }
+    }
+  },
+  "overall_summary": {
+    "total_models_tested": 2,
+    "total_attacks_performed": 16,
+    "average_success_rate": 0.1195,
+    "most_vulnerable_model": {
+      "model": "cicids2017_random_forest",
+      "success_rate": 0.22412499999999996
+    },
+    "most_robust_model": {
+      "model": "cicids2017_svm",
+      "success_rate": 0.014875000000000013
+    }
+  }
+}
